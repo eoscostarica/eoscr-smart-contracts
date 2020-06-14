@@ -1,2 +1,2 @@
 # eoscr-smart-contracts
-Smart contract library from EOS Costa Rica
+Smart contract library by EOS Costa Rica
