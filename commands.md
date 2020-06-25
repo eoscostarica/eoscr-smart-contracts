@@ -1,16 +1,16 @@
 ## Compile
 
 ```
-cd contracts/consent2life
-eosio-cpp -abigen ./src/consent2life.cpp -o consent2life.wasm -I ./include/ -R ./ricardian
+cd contracts/consentforms
+eosio-cpp -abigen ./src/consentforms.cpp -o consentforms.wasm -I ./include/ -R ./ricardian
 ```
 
 ### Deploy local
 
-#### consent2life
+#### consentforms
 
 ```
-cleos wallet create -n consent2life --to-console
+cleos wallet create -n consentforms --to-console
 
 Creating wallet: lifebankcode
 Save password to use in the future to unlock this wallet.
@@ -19,14 +19,14 @@ Without password imported keys will not be retrievable.
 ```
 
 ```
-cleos wallet import -n consent2life --private-key XXX
+cleos wallet import -n consentforms --private-key XXX
 imported private key for: EOS8SGFWbhTao1dnVRt9H5SkaKVtvpKiF6oG45SjybVzdASwpZRCN
 ```
 
 ```
-cleos wallet unlock -n consent2life --password YYY
+cleos wallet unlock -n consentforms --password YYY
 ```
 
 ```
-cleos -u https://jungle.eosio.cr set contract consent2life ./ consent2life.wasm consent2life.abi -p consent2life@active
+cleos -u https://jungle.eosio.cr set contract consentforms ./ consentforms.wasm consentforms.abi -p consentforms@active
 ```

@@ -32,14 +32,14 @@ var chai = require('chai'),assert = chai.assert;
 
 describe ('Lifebank unit test', function(){
 
-    it('contract: consent2life testing consent wrong auth',async () => {
+    it('contract: consentforms testing consent wrong auth',async () => {
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
-                    actor: 'consent2life',
+                    actor: 'consentforms',
                     permission: 'active',
                   }],
                   data: {
@@ -57,18 +57,18 @@ describe ('Lifebank unit test', function(){
           }
     });
 
-    it('contract: consent2life testing consent bad hash',async () => {
+    it('contract: consentforms testing consent bad hash',async () => {
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
-                    actor: 'consent2life',
+                    actor: 'consentforms',
                     permission: 'active',
                   }],
                   data: {
-                    user: 'consent2life',
+                    user: 'consentforms',
                     contract: 'consent3life',
                     hash: 'c27474851c08b81e5ad60cb6d6606393e8f9b6607'
                   },
@@ -82,18 +82,18 @@ describe ('Lifebank unit test', function(){
           }
     });
 
-    it('contract: consent2life testing consent invalid contract',async () => {
+    it('contract: consentforms testing consent invalid contract',async () => {
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
-                    actor: 'consent2life',
+                    actor: 'consentforms',
                     permission: 'active',
                   }],
                   data: {
-                    user: 'consent2life',
+                    user: 'consentforms',
                     contract: 'consent3life',
                     hash: '8dbc0156eaa14cf176385904a4b86b5896d641aad48a02c572e9cb7908dcfe28'
                   },
@@ -290,7 +290,7 @@ describe ('Lifebank unit test', function(){
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
                     actor: 'lifebank1111',
@@ -352,7 +352,7 @@ describe ('Lifebank unit test', function(){
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'revoke',
                   authorization: [{
                     actor: 'lifebank1111',
@@ -415,7 +415,7 @@ describe ('Lifebank unit test', function(){
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
                     actor: 'lifebank1111',
@@ -595,7 +595,7 @@ describe ('Lifebank unit test', function(){
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
                     actor: 'sponsor11111',
@@ -689,7 +689,7 @@ describe ('Lifebank unit test', function(){
         try {
             const result = await api.transact({
                 actions: [{
-                  account: 'consent2life',
+                  account: 'consentforms',
                   name: 'consent',
                   authorization: [{
                     actor: 'donor1111111',

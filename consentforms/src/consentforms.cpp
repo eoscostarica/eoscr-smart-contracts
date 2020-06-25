@@ -1,11 +1,11 @@
-#include <consent2life.hpp>
+#include <consentforms.hpp>
 
-checksum256 consent2life::string_to_hash(const string &input)
+checksum256 consentforms::string_to_hash(const string &input)
 {
   return sha256(input.c_str(), input.size());
 }
 
-ACTION consent2life::consent(name user, name contract, checksum256 hash)
+ACTION consentforms::consent(name user, name contract, checksum256 hash)
 {
   require_auth(user);
 
@@ -39,7 +39,7 @@ ACTION consent2life::consent(name user, name contract, checksum256 hash)
   }
 }
 
-ACTION consent2life::revoke(name user, name contract)
+ACTION consentforms::revoke(name user, name contract)
 {
   require_auth(user);
 
@@ -64,7 +64,7 @@ ACTION consent2life::revoke(name user, name contract)
   }
 }
 
-ACTION consent2life::clear()
+ACTION consentforms::clear()
 {
   require_auth(get_self());
 
@@ -78,4 +78,4 @@ ACTION consent2life::clear()
   }
 }
 
-EOSIO_DISPATCH(consent2life, (consent)(revoke)(clear))
+EOSIO_DISPATCH(consentforms, (consent)(revoke)(clear))

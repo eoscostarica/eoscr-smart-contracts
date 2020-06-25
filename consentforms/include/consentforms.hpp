@@ -5,9 +5,9 @@
  *
 
  * @section DESCRIPTION
- *  Header file for the declaration of all functions related with the consent2life contract
+ *  Header file for the declaration of all functions related with the consentforms contract
  *
- * Smart contract consent2life for  EOSIO blockchains
+ * Smart contract consentforms for  EOSIO blockchains
  *    WebSite:        https://eoscostarica.io
  *    GitHub:         https://github.com/eoscostarica
  *
@@ -18,7 +18,7 @@
 using namespace std;
 using namespace eosio;
 
-CONTRACT consent2life : public contract
+CONTRACT consentforms : public contract
 {
 public:
   using contract::contract;
