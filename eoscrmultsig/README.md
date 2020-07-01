@@ -1,5 +1,5 @@
 # Multisignatures example
-Example of Smart contract eoscrmultsig using multisignature,the main propouse of this contract is for explain how multisignature feature works
+Example of Smart contract eoscrmultsig using multisignature,the main propouse of this contract is to explain how multisignature feature works
 
 # Requeriments:
 
