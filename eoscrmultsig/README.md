@@ -3,6 +3,11 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
 
 # Requeriments:
 
+  You need the key pair for
+  
+- EOS5Rc8VJCyNCYPdE4gQhqPMTetFXkJPagkq4dicPCPGTAr5d4qu8
+- 5KCA .. .. .R5U
+
   The following accounts are required
    
   - eoscrmultsig: smart contract account
