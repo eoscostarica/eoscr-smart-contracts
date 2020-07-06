@@ -1,7 +1,7 @@
 # Multisignatures example
 Example of Smart contract eoscrmultsig using multisignature,the main propouse of this contract is to explain how multisignature feature works
 
-# Requeriments:
+## Requeriments:
 
   You need the private key pair for
   
@@ -15,16 +15,16 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
   - eoscrsigner2
   - eoscrsigner3
 
-# how to compile
+## how to compile
   type the follow command within the folder  eoscrmultsig
   - eosio-cpp eoscrmultsig.cpp -R ricardian -o eoscrmultsig.wasm -abigen
 
-# how to publish
+## how to publish
 - cleos -u http://jungle2.cryptolions.io:80 set contract eoscrmultsig . -p eoscrmultsig@active
 
-# Description
+## Description
 
-# Step 1: Create **letmeadd** proposal
+## Step 1: Create **letmeadd** proposal
 
 ![image info](./images/msig_step1.png)
 
@@ -35,3 +35,6 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
 >                                                                         {"actor":"eoscrsigner2","permission":"active"},
 >                                                                         {"actor":"eoscrsigner3","permission":"active"}]' 
 >                                                                          eoscrmultsig add '{"user_name":"msigned data"}' eoscrpropose 1 -p eoscrpropose@active
+
+### Review the proposal
+> cleos -u http://jungle2.cryptolions.io:80 multisig review --show-approvals eoscrpropose letmeadd
