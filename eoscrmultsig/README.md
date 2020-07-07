@@ -56,5 +56,14 @@ The account eoscrproposal execute the proposal with the follow command:
 Now the proposal execute the action **add**, the result can be seen within the user table
 > cleos -u http://jungle2.cryptolions.io:80 get table eoscrmultsig eoscrmultsig users
 
+## More multisig subcommands:
+  - **propose**                     Propose action
+  - **propose_trx**                 Propose transaction
+  - **review**                      Review transaction
+  - **approve**                     Approve proposed transaction
+  - **unapprove**                   Unapprove proposed transaction
+  - **invalidate**                  Invalidate all multisig approvals of an account
+  - **cancel**                      Cancel proposed transaction
+  - **exec**                        Execute proposed transaction
 
  
