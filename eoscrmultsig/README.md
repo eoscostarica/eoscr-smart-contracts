@@ -34,7 +34,27 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
 >                                                                       '[{"actor":"eoscrsigner1","permission":"active"},
 >                                                                         {"actor":"eoscrsigner2","permission":"active"},
 >                                                                         {"actor":"eoscrsigner3","permission":"active"}]' 
->                                                                          eoscrmultsig add '{"user_name":"msigned data"}' eoscrpropose 1 -p eoscrpropose@active
+>                                                                          eoscrmultsig add '{"user_name":"username"}' eoscrpropose 1 -p eoscrpropose@active
+
+## Step 2: Sign **letmeadd** proposal
+all requested accounts must signs the proposal
+![image info](./images/msig_step2.png)
 
 ### Review the proposal
+You can check the status of the proposal with the follow command:
 > cleos -u http://jungle2.cryptolions.io:80 multisig review --show-approvals eoscrpropose letmeadd
+
+Once all signers sign the proposal , the proposal creator can execute the proposal.
+![image info](./images/check_signatures.png)
+
+## Step 3: Execute the ***letmeadd** proposal
+![image info](./images/msig_step2.png)
+
+The account eoscrproposal execute the proposal with the follow command:
+> cleos -u http://jungle2.cryptolions.io:80 multisig exec eoscrpropose letmeadd eoscrmultsig
+
+Now the proposal execute the action **add**, the result can be seen within the user table
+> cleos -u http://jungle2.cryptolions.io:80 get table eoscrmultsig eoscrmultsig users
+
+
+ 
