@@ -48,7 +48,7 @@ Once all signers sign the proposal , the proposal creator can execute the propos
 ![image info](./images/check_signatures.png)
 
 ## Step 3: Execute the ***letmeadd** proposal
-![image info](./images/msig_step2.png)
+![image info](./images/msig_step3.png)
 
 The account eoscrproposal execute the proposal with the follow command:
 > cleos -u http://jungle2.cryptolions.io:80 multisig exec eoscrpropose letmeadd eoscrmultsig
