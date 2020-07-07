@@ -47,7 +47,13 @@ all requested accounts must signs the proposal
 - cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrsigner2","permission":"active"}' -p eoscrsigner2@active
 - cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrsigner3","permission":"active"}' -p eoscrsigner3@active
 
- 
+## Review the proposal
+You can check the status of the proposal with the follow command:. 
+> cleos -u http://jungle2.cryptolions.io:80 multisig review --show-approvals eoscrpropose letmeadd 
+
+![image info](./images/check_signatures.png)
+
+Once all signers sign the proposal , the proposal creator can execute the proposal. 
 
 ## Step 3: Execute the **letmeadd** proposal
 ![image info](./images/msig_step3.png)
@@ -58,10 +64,10 @@ The account eoscrproposal execute the proposal with the follow command:
 Now the proposal execute the action **add**, the result can be seen within the user table
 > cleos -u http://jungle2.cryptolions.io:80 get table eoscrmultsig eoscrmultsig users
 ## NOTE:
-if the authorization is enable **require_auth(_self);**
+if the authorization is enable
 ```
 ACTION add (name user_name) {
-    require_auth(_self);
+    ** require_auth(_self); **
      ...
 }
 ```
