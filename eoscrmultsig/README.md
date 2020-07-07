@@ -67,7 +67,7 @@ Now the proposal execute the action **add**, the result can be seen within the u
 if the authorization is enable
 ```
 ACTION add (name user_name) {
-    ** require_auth(_self); **
+     require_auth(_self);
      ...
 }
 ```
