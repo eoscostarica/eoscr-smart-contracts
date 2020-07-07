@@ -1,3 +1,8 @@
+## Description
+"Multisig is a term frequently used in the cryptographic and blockchain space. Essentially it enables multiple parties to sign or approve an action that takes place - typically a requirement for certain wallets, accounts, and smart contracts to prevent a rogue or hacked individual from performing detrimental actions"
+
+[https://steemit.com/eos/@genereos/eos-multisig-tutorial ](https://steemit.com/eos/@genereos/eos-multisig-tutorial )
+
 # Multisignatures example
 Example of Smart contract eoscrmultsig using multisignature,the main propouse of this contract is to explain how multisignature feature works
 
@@ -22,7 +27,6 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
 ## how to publish
 - cleos -u http://jungle2.cryptolions.io:80 set contract eoscrmultsig . -p eoscrmultsig@active
 
-## Description
 
 ## Step 1: Create **letmeadd** proposal
 
@@ -39,15 +43,13 @@ Example of Smart contract eoscrmultsig using multisignature,the main propouse of
 ## Step 2: Sign **letmeadd** proposal
 all requested accounts must signs the proposal
 ![image info](./images/msig_step2.png)
+- cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrsigner1","permission":"active"}' -p eoscrsigner1@active
+- cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrsigner2","permission":"active"}' -p eoscrsigner2@active
+- cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrsigner3","permission":"active"}' -p eoscrsigner3@active
 
-### Review the proposal
-You can check the status of the proposal with the follow command:
-> cleos -u http://jungle2.cryptolions.io:80 multisig review --show-approvals eoscrpropose letmeadd
+ 
 
-Once all signers sign the proposal , the proposal creator can execute the proposal.
-![image info](./images/check_signatures.png)
-
-## Step 3: Execute the ***letmeadd** proposal
+## Step 3: Execute the **letmeadd** proposal
 ![image info](./images/msig_step3.png)
 
 The account eoscrproposal execute the proposal with the follow command:
@@ -55,8 +57,17 @@ The account eoscrproposal execute the proposal with the follow command:
 
 Now the proposal execute the action **add**, the result can be seen within the user table
 > cleos -u http://jungle2.cryptolions.io:80 get table eoscrmultsig eoscrmultsig users
-
-## More multisig subcommands:
+## NOTE:
+if the authorization is enable **require_auth(_self);**
+```
+ACTION add (name user_name) {
+    require_auth(_self);
+     ...
+}
+```
+**{"actor":"eoscrmultsig","permission":"active"}** must be included within proposal definition, and its signature is required
+> cleos -u http://jungle2.cryptolions.io:80 multisig approve eoscrpropose letmeadd '{"actor":"eoscrmultsig","permission":"active"}' -p eoscrmultsig@active
+#### More multisig subcommands:
   - **propose**                     Propose action
   - **propose_trx**                 Propose transaction
   - **review**                      Review transaction
