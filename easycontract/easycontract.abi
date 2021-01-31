@@ -8,14 +8,6 @@
             "base": "",
             "fields": [
                 {
-                    "name": "sender",
-                    "type": "name"
-                },
-                {
-                    "name": "tx_id",
-                    "type": "uint64"
-                },
-                {
                     "name": "date",
                     "type": "string"
                 },
