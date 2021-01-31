@@ -11,3 +11,8 @@ Execute `cleos wallet create -n easycontract --to-console` and save the output p
 
 ## Compile easycontract
 `eosio-cpp -abigen -I include -R resource -contract easycontract -o easycontract.wasm src/easycontract.cpp`
+
+## Deploy easycontract
+In order to deploy the contract, you need to execute `cleos set contract easycontract ./ easycontract.wasm -a easycontract.abi -p easycontract@active`.  
+
+> *Remember to import the necessary key*
