@@ -1,0 +1,35 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "save",
+            "base": "",
+            "fields": [
+                {
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "name": "filename",
+                    "type": "string"
+                },
+                {
+                    "name": "path",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "save",
+            "type": "save",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "variants": []
+}
