@@ -1,0 +1,140 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proxy",
+                    "type": "name"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "slogan",
+                    "type": "string"
+                },
+                {
+                    "name": "philosophy",
+                    "type": "string"
+                },
+                {
+                    "name": "background",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                },
+                {
+                    "name": "logo_256",
+                    "type": "string"
+                },
+                {
+                    "name": "telegram",
+                    "type": "string"
+                },
+                {
+                    "name": "steemit",
+                    "type": "string"
+                },
+                {
+                    "name": "twitter",
+                    "type": "string"
+                },
+                {
+                    "name": "wechat",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "proxy",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "website",
+                    "type": "string"
+                },
+                {
+                    "name": "slogan",
+                    "type": "string"
+                },
+                {
+                    "name": "philosophy",
+                    "type": "string"
+                },
+                {
+                    "name": "background",
+                    "type": "string"
+                },
+                {
+                    "name": "logo_256",
+                    "type": "string"
+                },
+                {
+                    "name": "telegram",
+                    "type": "string"
+                },
+                {
+                    "name": "steemit",
+                    "type": "string"
+                },
+                {
+                    "name": "twitter",
+                    "type": "string"
+                },
+                {
+                    "name": "wechat",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "remove",
+            "base": "",
+            "fields": [
+                {
+                    "name": "proxy",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "remove",
+            "type": "remove",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "proxies",
+            "type": "proxy",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
