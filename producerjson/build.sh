@@ -1,1 +1,1 @@
-/usr/local/eosio/bin/eosiocpp -g producerjson.abi producerjson.cpp && /usr/local/eosio/bin/eosiocpp -o producerjson.wast producerjson.cpp
+eosio-cpp -abigen -I ./inlcude -contract producerjson -o producerjson.wasm ./producerjson.cpp

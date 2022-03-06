@@ -1,4 +1,5 @@
 #include <eosio/eosio.hpp>
+#include <eosio/system.hpp>
 
 using namespace std;
 using namespace eosio;
@@ -7,8 +8,8 @@ CONTRACT producerjson : public contract {
   public:
     using contract::contract;
 
-    ACTION set(name owner, string json)
-    ACTION del(name owner)
+    ACTION set(name owner, string json);
+    ACTION del(name owner);
 
   private:
     TABLE producerjson {
