@@ -1,1 +1,1 @@
-eosio-cpp -abigen -I ./inlcude -contract producerjson -o producerjson.wasm ./producerjson.cpp
+eosio-cpp -abigen -I ./include --contract producerjson_contract -o producerjson.wasm ./producerjson.cpp
